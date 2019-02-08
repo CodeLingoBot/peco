@@ -290,7 +290,7 @@ func TestApplyConfig(t *testing.T) {
 	}
 }
 
-// While this issue is labeled for Issue363, it tests against 376 as well.
+// TestGHIssue363; While this issue is labeled for Issue363, it tests against 376 as well.
 // The test should have caught the bug for 376, but the premise of the test
 // itself was wrong
 func TestGHIssue363(t *testing.T) {

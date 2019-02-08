@@ -28,7 +28,7 @@ func ContainsUpper(query string) bool {
 // Global var used to strips ansi sequences
 var reANSIEscapeChars = regexp.MustCompile("\x1B\\[(?:[0-9]{1,2}(?:;[0-9]{1,2})?)*[a-zA-Z]")
 
-// Function who strips ansi sequences
+// StripANSISequence; Function who strips ansi sequences
 func StripANSISequence(s string) string {
 	return reANSIEscapeChars.ReplaceAllString(s, "")
 }

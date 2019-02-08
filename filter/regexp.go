@@ -182,7 +182,7 @@ func NewCaseSensitive() *Regexp {
 	return rf
 }
 
-// SmartCase turns ON the ignore-case flag in the regexp
+// NewSmartCase turns ON the ignore-case flag in the regexp
 // if the query contains a upper-case character
 func NewSmartCase() *Regexp {
 	rf := NewRegexp()

@@ -26,7 +26,7 @@ func (p payload) Done() {
 	close(p.done)
 }
 
-// NewHub creates a new Hub struct
+// New creates a new Hub struct
 func New(bufsiz int) *Hub {
 	return &Hub{
 		isSync:      false,
@@ -61,7 +61,7 @@ func (h *Hub) Batch(f func(), shouldLock bool) {
 	f()
 }
 
-// low-level utility
+// send; low-level utility
 func send(ch chan Payload, r *payload, needReply bool) {
 	if needReply {
 		r.done = make(chan struct{})

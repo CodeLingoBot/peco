@@ -14,7 +14,7 @@ import (
 	"github.com/peco/peco/pipeline"
 )
 
-// Creates a new Source. Does not start processing the input until you
+// NewSource creates a new Source. Does not start processing the input until you
 // call Setup()
 func NewSource(name string, in io.Reader, idgen line.IDGenerator, capacity int, enableSep bool) *Source {
 	s := &Source{

@@ -184,6 +184,7 @@ func (km *Keymap) ApplyKeybinding() error {
 	return errors.Wrap(k.Compile(), "failed to compile key binding patterns")
 }
 
+// hasModifierMaps; 
 // TODO: this needs to be fixed.
 func (km Keymap) hasModifierMaps() bool {
 	return false

@@ -25,7 +25,7 @@ func (fp *filterProcessor) Accept(ctx context.Context, in chan interface{}, out 
 	acceptAndFilter(ctx, fp.filter, in, out)
 }
 
-// This flusher is run in a separate goroutine so that the filter can
+// flusher is run in a separate goroutine so that the filter can
 // run separately from accepting incoming messages
 func flusher(ctx context.Context, f filter.Filter, incoming chan []line.Line, done chan struct{}, out pipeline.ChanOutput) {
 	if pdebug.Enabled {

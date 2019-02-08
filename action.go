@@ -151,10 +151,10 @@ func init() {
 	)
 }
 
-// This is a noop action
+// doNothing is a noop action
 func doNothing(_ context.Context, _ *Peco, _ termbox.Event) {}
 
-// This is an exception to the rule. This does not get registered
+// doAcceptChar is an exception to the rule. This does not get registered
 // anywhere. You just call it directly
 func doAcceptChar(ctx context.Context, state *Peco, e termbox.Event) {
 	if e.Key == termbox.KeySpace {

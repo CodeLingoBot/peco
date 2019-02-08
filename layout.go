@@ -26,7 +26,7 @@ func IsValidVerticalAnchor(anchor VerticalAnchor) bool {
 	return anchor == AnchorTop || anchor == AnchorBottom
 }
 
-// Utility function
+// mergeAttribute; Utility function
 func mergeAttribute(a, b termbox.Attribute) termbox.Attribute {
 	if a&0x0F == 0 || b&0x0F == 0 {
 		return a | b
